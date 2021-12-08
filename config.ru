@@ -13,4 +13,5 @@ use Rack::JSONBodyParser
 
 # Our application
 use BlogsController
+use AuthorsController
 run ApplicationController
