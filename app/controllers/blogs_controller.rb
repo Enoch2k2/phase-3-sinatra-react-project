@@ -37,6 +37,16 @@ class BlogsController < ApplicationController
     end
   end
 
+  delete '/blogs/:id' do
+    find_blog
+    if @blog
+      @blog.destroy
+      @blog.to_json
+    else
+      { errors: ["Blog doesn't exist"]}.to_json
+    end
+  end
+
   private
     def find_blog
       @blog = Blog.find_by_id(params[:id])
