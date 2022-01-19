@@ -26,12 +26,22 @@ class BlogsController < ApplicationController
       # return the blog json
     # otherwise if unsaved (meaning bad data)
       # return errors
+    errors = []
 
     @author = Author.find_or_create_by(name: params[:author][:name])
+
+    unless @author.id
+      errors = errors.concat(@author.errors.full_messages)
+    end
+
     @blog = @author.blogs.build(params[:blog])
 
-    if @blog.save
+    if @author.id && @blog.save
       @blog.to_json(include: [:author])
+    elsif !@author.id && !@blog.valid?
+      { errors: errors.concat(@blog.errors.full_messages) }.to_json
+    elsif !@author.id && @blog.valid?
+      { errors: errors }.to_json
     else
       { errors: @blog.errors.full_messages }.to_json
     end
