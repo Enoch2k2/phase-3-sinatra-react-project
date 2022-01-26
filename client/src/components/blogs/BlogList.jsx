@@ -1,9 +1,9 @@
 import React from 'react'
 import BlogCard from './BlogCard'
 
-const BlogList = ({ blogs }) => {
+const BlogList = ({ blogs, deleteBlog }) => {
 
-  const blogCards = blogs.map(blog => <BlogCard blog={ blog } key={ blog.id } />)
+  const blogCards = blogs.map(blog => <BlogCard blog={ blog } key={ blog.id } deleteBlog={ deleteBlog } />)
   return (
     <div>
       <h1>Blog List</h1>

@@ -52,7 +52,7 @@ const BlogForm = ({ addBlog, addErrors, clearErrors }) => {
       <form onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="title">Title</label>
-          <input type="text" name="title" id="title" value={ title } onChange={ e => setTitle(e.target.value) } required={ true }/>
+          <input type="text" name="title" id="title" value={ title } onChange={ e => setTitle(e.target.value) } />
         </div>
         <div>
           <label htmlFor="content">Content</label><br />

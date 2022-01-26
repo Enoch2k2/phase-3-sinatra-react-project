@@ -13,16 +13,17 @@ An application that allows us to create blogs as different authors. Would allow 
 # MVP
 1. List Blogs (sinatra)) - x
 2. Create Blog Route (sinatra)) - x
-3. Delete Blogs (sinatra))
-4. Home Page (react side)
-5. List Blogs (react)
-6. Create Blog (react)
-7. Delete Blog (react)
+3. Delete Blogs (sinatra)) - x
+4. Home Page (react side) - x
+5. List Blogs (react) - x
+6. Create Blog (react) - x
+7. Delete Blog (react) - x
 
 # Stretch Goals
-5. Update Blog (patch)
-6. Show 1 specific blog (get (show))
-7. Create Comment Route (post)
+8. List Blogs Via Author
+9. Show 1 specific blog (get (show))
+10. Update Blog (patch)
+11. Create Comment Route (post)
 
 
 ## Models

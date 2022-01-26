@@ -47,7 +47,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  delete '/blogs/:id' do
+  delete '/blogs/:id' do # fetch('http://localhost:9292/blogs/1')
     find_blog
     if @blog
       @blog.destroy
