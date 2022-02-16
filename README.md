@@ -1,5 +1,8 @@
 # Phase 3 Project Guidelines
 
+### Frontend Repo
+- [Frontend Repo](https://github.com/Enoch2k2/sinatra-react-library-frontend)
+
 ## Learning Goals
 
 - Build a web basic API with Sinatra and Active Record to support a React
