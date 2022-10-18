@@ -3,7 +3,18 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    answer = 12345 + 7
+    { message: "Good luck with your project! Also the answer is #{ answer }" }.to_json
+  end
+
+  get "/movies" do
+    movies = Movie.all
+    movies.to_json
+  end
+
+  post "/movies" do
+    movie = Movie.create(params)
+    movie.to_json
   end
 
 end
