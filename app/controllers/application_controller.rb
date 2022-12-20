@@ -6,4 +6,8 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
+
+  def render_error
+    { error: "YOU CANT DO THAT!" }.to_json
+  end
 end

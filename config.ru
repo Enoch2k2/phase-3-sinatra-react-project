@@ -9,7 +9,9 @@ use Rack::Cors do
 end
 
 # Parse JSON from the request body into the params hash
-use Rack::JSONBodyParser
+use Rack::JSONBodyParser # stringified json from frontend gets converted via this line to params
 
 # Our application
+use OwnersController
+use PetsController
 run ApplicationController

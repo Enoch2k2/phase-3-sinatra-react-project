@@ -22,3 +22,8 @@ task :console do
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   Pry.start
 end
+
+desc "migrates database and starts server"
+task :migrate_and_start do
+  system "rake db:migrate && rake server"
+end
